@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NotesActivity">
+
+    <ImageView
+        android:id="@+id/waveform"
+        android:layout_width="551dp"
+        android:layout_height="165dp"
+        android:layout_marginLeft="-20dp"
+        android:layout_marginRight="-2dp"
+        android:layout_marginTop="-11dp"
+        android:paddingTop="18dp"
+        android:src="@drawable/ic_wave"
+        android:scaleY="-1"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:translationZ="-10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/image_gnu"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_marginTop="-65dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/waveform"
+        app:layout_constraintVertical_bias="1.0">
+    </ImageView>
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_gnu"
+        app:layout_constraintVertical_bias="0.737"
+        tools:listitem="@layout/list_item">
+
+    </ListView>
+
+    <ImageView
+        android:id="@+id/waveform1"
+        android:layout_width="551dp"
+        android:layout_height="165dp"
+        android:layout_marginLeft="-20dp"
+        android:layout_marginTop="-80dp"
+        android:layout_marginRight="-2dp"
+        android:layout_marginBottom="-11dp"
+        android:paddingTop="18dp"
+        android:elevation="-10dp"
+        android:src="@drawable/ic_wave"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/listview"
+        app:layout_constraintVertical_bias="1.0">
+    </ImageView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_notes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_add_24"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="22dp"
+
+        android:layout_marginBottom="50dp"
+
+        />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_nav_menu"
+        android:translationZ="30dp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
